@@ -1,0 +1,47 @@
+.modal {
+    position: absolute;
+    top: 20%;
+    background-color: rgba(0,255,180, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.modal-close {
+    margin-left: calc(100% - 12px); /*Is there a better way to do this?*/
+}
+
+#new-task-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#new-task-form > div > label, input, textarea, select {
+    display: block;
+    width: 100%;
+}
+
+#form-title {
+    grid-column: 1 / 3;
+}
+
+#form-description {
+    grid-column: 1 / 3;
+}
+
+#form-submit {
+    grid-column: 2 / 3;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+.hidden {
+    display: none;
+}
